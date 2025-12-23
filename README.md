@@ -11,6 +11,7 @@ KHÔNG CẦN cài đặt server hay phần mềm thêm
 
 CÁC BƯỚC CÀI ĐẶT
 BƯỚC 1: Tải và giải nén
+
 1. Tải file nén về máy
 2. Giải nén vào thư mục bất kỳ
 3. Đảm bảo cấu trúc thư mục như sau:
@@ -29,7 +30,9 @@ ATGT/
         ├── study.js        
         ├── signs.js        
         └── utils.js
+
 BƯỚC 2: Mở ứng dụng
+
 1. Tìm file "index.html" trong thư mục đã giải nén
 2. Nhấp đúp vào file index.html
    HOẶC
