@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ thống Ôn thi Sát hạch Lái xe</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                        <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                    <h1>Ôn thi Sát hạch Lái xe</h1>
+                </div>
+                <nav class="navigation">
+                    <button id="darkModeToggle" class="dark-toggle" aria-label="Toggle dark mode">
+                        <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="5"/>
+                            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                        </svg>
+                        <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                        </svg>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Back Button -->
+    <div id="backButtonContainer" class="back-button-container" style="display: none;">
+        <div class="container">
+            <button id="backButton" class="back-button">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="m15 18-6-6 6-6"/>
+                </svg>
+                Quay lại trang chủ
+            </button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Dashboard Page -->
+            <div id="dashboardPage" class="page active">
+                <div class="page-header">
+                    <h2>Chào mừng đến với hệ thống ôn thi sát hạch lái xe</h2>
+                    <p>Chuẩn bị tốt nhất cho kỳ thi sát hạch với bộ câu hỏi đầy đủ và chi tiết</p>
+                </div>
+
+                <!-- Stats Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-label">Điểm cao nhất</span>
+                            <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                            </svg>
+                        </div>
+                        <div class="stat-value" id="highestScore">--</div>
+                        <div class="stat-description">điểm</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-label">Số lần thi</span>
+                            <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+                                <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+                            </svg>
+                        </div>
+                        <div class="stat-value" id="totalTests">0</div>
+                        <div class="stat-description">lần thi</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-label">Câu hỏi</span>
+                            <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                            </svg>
+                        </div>
+                        <div class="stat-value">30</div>
+                        <div class="stat-description">câu hỏi</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-label">Biển báo</span>
+                            <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="3,11 22,2 13,21 11,13 3,11"/>
+                            </svg>
+                        </div>
+                        <div class="stat-value">6</div>
+                        <div class="stat-description">loại biển</div>
+                    </div>
+                </div>
+
+                <!-- Action Cards -->
+                <div class="action-grid">
+                    <div class="action-card">
+                        <div class="action-header">
+                            <div class="action-icon primary">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                                </svg>
+                            </div>
+                            <div class="action-content">
+                                <h3>Thi thử sát hạch</h3>
+                                <p>Làm bài thi thử với 10 câu hỏi trong 10 phút</p>
+                            </div>
+                        </div>
+                        <div class="action-body">
+                            <div class="badges">
+                                <span class="badge">10 câu hỏi</span>
+                                <span class="badge">10 phút</span>
+                                <span class="badge">Nhiều chủ đề</span>
+                            </div>
+                            <ul class="feature-list">
+                                <li>• Quy tắc giao thông đường bộ</li>
+                                <li>• Biển báo hiệu giao thông</li>
+                                <li>• An toàn giao thông</li>
+                                <li>• Tốc độ và khoảng cách</li>
+                            </ul>
+                            <button class="action-button primary" onclick="startQuiz()">
+                                Bắt đầu thi thử
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="action-card">
+                        <div class="action-header">
+                            <div class="action-icon success">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polygon points="10,8 16,12 10,16 10,8"/>
+                                </svg>
+                            </div>
+                            <div class="action-content">
+                                <h3>Ôn tập câu hỏi</h3>
+                                <p>Học từng câu một cách chi tiết với giải thích</p>
+                            </div>
+                        </div>
+                        <div class="action-body">
+                            <div class="badges">
+                                <span class="badge success">30 câu hỏi</span>
+                                <span class="badge success">Không giới hạn thời gian</span>
+                                <span class="badge success">Có giải thích</span>
+                            </div>
+                            <ul class="feature-list">
+                                <li>• Xem đáp án và giải thích chi tiết</li>
+                                <li>• Lọc theo chủ đề</li>
+                                <li>• Tìm kiếm câu hỏi</li>
+                                <li>• Theo dõi tiến độ học tập</li>
+                            </ul>
+                            <button class="action-button success" onclick="startStudy()">
+                                Bắt đầu ôn tập
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="action-card">
+                        <div class="action-header">
+                            <div class="action-icon secondary">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polygon points="3,11 22,2 13,21 11,13 3,11"/>
+                                </svg>
+                            </div>
+                            <div class="action-content">
+                                <h3>Biển báo giao thông</h3>
+                                <p>Tìm hiểu về các loại biển báo và ý nghĩa</p>
+                            </div>
+                        </div>
+                        <div class="action-body">
+                            <div class="badges">
+                                <span class="badge secondary">Biển cấm</span>
+                                <span class="badge secondary">Biển báo nguy hiểm</span>
+                                <span class="badge secondary">Biển chỉ dẫn</span>
+                            </div>
+                            <ul class="feature-list">
+                                <li>• Biển cấm và hạn chế</li>
+                                <li>• Biển báo nguy hiểm</li>
+                                <li>• Biển hiệu lệnh</li>
+                                <li>• Biển chỉ dẫn</li>
+                            </ul>
+                            <button class="action-button secondary" onclick="viewSigns()">
+                                Xem biển báo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quiz History -->
+                <div id="quizHistorySection" style="display: none;">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Lịch sử thi gần đây</h3>
+                        </div>
+                        <div class="card-body">
+                            <div id="quizHistoryList" class="quiz-history">
+                                <!-- History items will be inserted here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quiz Page -->
+            <div id="quizPage" class="page">
+                <div id="quizContent">
+                    <!-- Quiz content will be generated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Study Page -->
+            <div id="studyPage" class="page">
+                <div id="studyContent">
+                    <!-- Study content will be generated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Traffic Signs Page -->
+            <div id="signsPage" class="page">
+                <div id="signsContent">
+                    <!-- Signs content will be generated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 Hệ thống Ôn thi Sát hạch Lái xe. Phát triển nhằm mục đích học tập và nâng cao ý thức an toàn giao thông.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/utils.js"></script>
+    <script src="assets/js/quiz.js"></script>
+    <script src="assets/js/study.js"></script>
+    <script src="assets/js/signs.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
