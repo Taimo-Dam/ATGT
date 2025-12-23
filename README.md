@@ -37,10 +37,12 @@ BƯỚC 2: Mở ứng dụng
 2. Nhấp đúp vào file index.html
    HOẶC
 3. Kéo thả file index.html vào trình duyệt
+
 BƯỚC 3: Bắt đầu sử dụng
- Ứng dụng sẽ tự động chạy
- Không cần cấu hình thêm
- Sẵn sàng sử dụng ngay
+
+Ứng dụng sẽ tự động chạy
+Không cần cấu hình thêm
+Sẵn sàng sử dụng ngay
 ----------------------------------------------------------------------------------------
 HƯỚNG DẪN SỬ DỤNG NHANH
 1. TRANG CHỦ (Dashboard)
