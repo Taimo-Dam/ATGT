@@ -1,15 +1,23 @@
 HỆ THỐNG ÔN THI SÁT HẠCH LÁI XE
+
 GIỚI THIỆU
+
 Ứng dụng web hỗ trợ ôn tập và thi thử sát hạch lái xe mô tô hạng A1 với 30 câu hỏi và 6 loại biển báo giao thông.
+
 -----------------------------------------------------------------------------------------
+
 HƯỚNG DẪN CÀI ĐẶT
+
 YÊU CẦU HỆ THỐNG
 
 Trình duyệt web hiện đại (Chrome, Firefox, Safari, Edge)
+
 Kết nối internet (để tải font chữ và hình ảnh)
+
 KHÔNG CẦN cài đặt server hay phần mềm thêm
 
 CÁC BƯỚC CÀI ĐẶT
+
 BƯỚC 1: Tải và giải nén
 
 1. Tải file nén về máy
@@ -41,17 +49,25 @@ BƯỚC 2: Mở ứng dụng
 BƯỚC 3: Bắt đầu sử dụng
 
 Ứng dụng sẽ tự động chạy
+
 Không cần cấu hình thêm
+
 Sẵn sàng sử dụng ngay
+
 ----------------------------------------------------------------------------------------
+
 HƯỚNG DẪN SỬ DỤNG NHANH
+
 1. TRANG CHỦ (Dashboard)
 
 Xem thống kê: điểm cao nhất, số lần thi
+
 Chọn một trong 3 chức năng:
 
 Bắt đầu thi thử → Làm bài thi 10 câu trong 10 phút
+
 Bắt đầu ôn tập → Học từng câu với giải thích chi tiết
+
 Xem biển báo → Xem các loại biển báo giao thông
 
 2. THI THỬ SÁT HẠCH
@@ -62,6 +78,7 @@ Xem biển báo → Xem các loại biển báo giao thông
 4. Theo dõi thời gian ở góc trên phải
 5. Nhấn "Nộp bài" khi hoàn thành
 6. Xem kết quả chi tiết
+
 	Điều kiện đạt: 8/10 câu đúng
 
 3. ÔN TẬP CÂU HỎI
